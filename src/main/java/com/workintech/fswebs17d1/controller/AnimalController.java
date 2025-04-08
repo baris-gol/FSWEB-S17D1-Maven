@@ -41,13 +41,13 @@ public class AnimalController {
         animals.put(animal.getId(), animal);
     }
 
-    // [PUT] /workintech/animal/{id} : ilgili id'deki animal güncelleme
+    // [PUT] /workintech/animal/{id} : ilgili id deki animal güncelleme
     @PutMapping("/{id}")
     public void updateAnimal(@PathVariable Integer id, @RequestBody Animal updatedAnimal) {
         animals.put(id, updatedAnimal);
     }
 
-    // [DELETE] /workintech/animal/{id} : ilgili id'deki animal silinir
+    // [DELETE] /workintech/animal/{id} : ilgili id deki animal silinir
     @DeleteMapping("/{id}")
     public void deleteAnimal(@PathVariable Integer id) {
         animals.remove(id);
